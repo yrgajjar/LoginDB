@@ -10,7 +10,7 @@ import com.vaadin.ui.Notification.Type;
 import com.vaadin.ui.themes.ValoTheme;
 import com.vaadin.v7.data.fieldgroup.BeanFieldGroup;
 import com.vaadin.v7.data.fieldgroup.FieldGroup;
-import com.vaadin.v7.ui.DateField;
+import com.vaadin.v7.ui.Password;
 import com.vaadin.v7.ui.TextField;
 
 /* Create custom UI Components.
@@ -25,11 +25,11 @@ public class ContactForm extends FormLayout {
 
     Button save = new Button("Save", this::save);
     Button cancel = new Button("Cancel", this::cancel);
-    TextField firstName = new TextField("First name");
-    TextField lastName = new TextField("Last name");
+    TextField WebsiteName = new TextField("Website Name");
+    TextField WebsiteLink = new TextField("Website Link");
     TextField phone = new TextField("Phone");
     TextField email = new TextField("Email");
-    DateField birthDate = new DateField("Birth date");
+    TextField Password = new TextField("Password");
 
     Contact contact;
 
@@ -60,7 +60,7 @@ public class ContactForm extends FormLayout {
         HorizontalLayout actions = new HorizontalLayout(save, cancel);
         actions.setSpacing(true);
 
-        addComponents(actions, firstName, lastName, phone, email, birthDate);
+        addComponents(actions, firstName, lastName, phone, email, Password);
     }
 
     /*
